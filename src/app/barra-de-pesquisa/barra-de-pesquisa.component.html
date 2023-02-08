@@ -1,0 +1,5 @@
+<form class="search-form" (ngSubmit)='pesquisar()'>   <!--atrela o submite abaixo nessa funcao-->
+  <input type="text" name="descricao" [(ngModel)]="descricao"> <!-- fazer o importe do FormsModel no app.module.ts, aqui e a propriedade-->
+                                         <!-- vai enchergar o que foi digitado nas proximas pesquisas, fica guardado-->
+  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>

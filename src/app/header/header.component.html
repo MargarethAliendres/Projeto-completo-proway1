@@ -1,0 +1,52 @@
+<header class="main-header">
+  <h1 class="main-header__title">
+    <span class="main-header__title--blue">ProWay</span
+    ><span class="main-header__title--orange">Computers</span>
+  </h1>
+  <div div class="container-menu">
+    <nav class="main-header__menu ul">
+      <ul>
+        <li><a routerLink="produtos"> Produtos</a></li>
+        <!--link com a pagina -->
+        <li>
+          <a routerLink="carrinho">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Carrinho
+            <span class="badge-carrinho">{{
+              carrinhoService.obtemCarrinho().length
+            }}</span> <!--length comprimento da lista do carrinho, quantos objetos-->
+            <!--aqui antes tinha colocado um numero 0-->
+          </a>
+        </li>
+        <li><a routerLink="contato"> Contato</a></li>
+        <!-- aqui abre direto a pagina contato-->
+
+        <li>
+          <a> <i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+        <li>
+          <a> <i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a> <i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a> <i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a> <i class="fa-brands fa-linkedin"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <app-barra-de-pesquisa></app-barra-de-pesquisa>
+    <!--apos a criacao do componet barra de pesquisa, cola aqui a pagina-->
+    <!--  A BARRA DE PESQUISA ERA AQUI, MAS CRIAMOS OUTRO COMPONENTE PARA A BARRAS DE PESQUISA, POIS QUANDO EU ESTAVA NA PAGINA CONTATO, E DIGITAVA MOUSE NA PESQUISA ELE NAO DIRECIONAVA PAR A PAGINA DE PRODUTOS
+  <form class="search-form">         esse search-form já faz um get, na url já aparece o parametro de pesquisa, son com esse nome descicao
+    <input type="text" name="descricao">
+    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>    esse submit manda um get
+  </form>
+
+  copia isso e mais os estilo css e cole no novo componente
+-->
+  </div>
+</header>

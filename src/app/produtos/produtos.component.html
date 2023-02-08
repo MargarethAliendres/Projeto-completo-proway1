@@ -1,0 +1,12 @@
+                                             <!-- esse produto é a variavel que recebe produtos-->
+<section class="product-list">                            <!-- esse produtos criamos essa variavel na classe que recebeu a lista-->
+  <div class="product-list__card" *ngFor="let produto of produtos">  <!-- esse ngFor renderiza a lista de produtos-->
+    <a routerLink= "/produtos/{{produto.id}}" class="product-list__link ">   <!-- vai rotear, fazer link com nome produto/id (nesse caso é rotemento com paramentro, após colocar aqui (tem que criar um componet do click, e um componente do 404!pagina nao encontrada)-->
+      <img [src]="produto.imagem"/>       <!-- tem que colocar dentro de colchete quando tiver recebendo uma lista-->  <!-- antes deixei em branco src=";"-->
+      <h2 class="product-item__name">{{produto.descricao}}</h2>      <!-- aqui antes só tinha o nome inicial, agora que coloco definitivo  antes só tinha Produto1 sem os colchetes-->
+      <p class="product-item__price">{{produto.preco | currency: "BRL"}}</p>           <!-- aqui antes só tinha o nome inicial, agora que coloco definitivo  antes só tinha R$0,00 sem os colchetes-->
+      <p class="product-item__price-description">{{produto.descricaoPreco}}</p> <!-- aqui antes só tinha o nome inicial, agora que coloco definitivo  antes só tinha A vista sem os colchetes-->
+      <button class="product-item__buy-button" type="button">Comprar</button>
+    </a>
+  </div>
+</section>

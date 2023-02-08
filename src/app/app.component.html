@@ -1,0 +1,6 @@
+<div class="container">
+<app-header></app-header>      <!-- esse container tem um padding, por isso vamos colocar o footer fora, para ocupar todo o tamanho da tela-->
+<router-outlet></router-outlet>    <!-- depois que cria o modulo componente e configura, deve colocar esse componente aqui-->
+</div>                              <!-- coloca aqui, pois todas as pagina que acrescentar, vai aparecer entre o cabeçalho e o hooter-->
+                                    <!-- e tambem colocou dentro da div para pegar a configuração do container-->
+<app-footer></app-footer>  <!-- fora da div, para nao pegar a configuração do container, vai ficar lado a lado da pagina toda-->
